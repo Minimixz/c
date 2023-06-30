@@ -1,0 +1,8 @@
+x = int(input('Qual o número? '))
+b = int(input('Qual o segundo número? '))
+
+a = x + b
+
+resultado = a
+
+print(resultado)
