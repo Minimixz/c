@@ -1,0 +1,37 @@
+candidatos_prefeitos = ['joao', 'maria', 'jose']
+candidatos_vereadores = ['ana', 'carlos', 'mariana']
+
+votos_prefeitos = [0] * len(candidatos_prefeitos)
+votos_vereadores = [0] * len(candidatos_vereadores)
+
+while True:
+    print('1 votar para prefeito')
+    print('2 votar para vereador')
+    print('3 sair')
+    print('')
+
+    opcao = int(input('Digite o número: '))
+
+    if opcao == 1:
+        print('Prefeito:')
+        print('')
+        voto = int(input('Digite o número do candidato: '))
+        votos_prefeitos[voto] += 1
+
+    elif opcao == 2:
+        print('Vereador:')
+        print('')
+        voto = int(input('Digite o número do candidato: '))
+        votos_vereadores[voto] += 1
+
+    elif opcao == 3:
+        break
+
+print('Eleição encerrada')
+print('Prefeito:')
+for i, candidato in enumerate(candidatos_prefeitos):
+    print(candidato + ':', votos_prefeitos[i])
+
+print('Vereador:')
+for i, candidato in enumerate(candidatos_vereadores):
+    print(candidato + ':', votos_vereadores[i])
